@@ -25,17 +25,34 @@ document.addEventListener("DOMContentLoaded", () =>{
     <button>switch</button>
     `
 
+
     // now showing logic here
+    let nowShowingElm = document.createElement("section");
+    nowShowingElm.classList.add("nowShowing");
+    nowShowingElm.innerHTML=`
+    <img src="" alt="img">
+    <p>Movie title</p>
+
+    `
+
+    mainElm.append(nowShowingElm);
+
+   
+
+
+
+
+    //popular showing
     let popularElm = document.createElement("section");
     popularElm.classList.add("popular");
     mainElm.append(popularElm);
 
     let popularHeader = document.createElement("header")
      popularHeader.innerHTML=`
-     
+     <div class="">
     <h2>Popular</h2>
-    <a href="#">Show more</a>
-    
+    <a href="#">See more</a>
+</div>
    
     `
     popularElm.append(popularHeader);
@@ -43,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     //polular movies showing here
     let popularMovies = document.createElement("div");
+    popularMovies.classList.add("pouplarmovies__container")
     popularElm.append(popularMovies)
 
     fetch(`${baseURL}/movie/popular?api_key=${apikey}`)
@@ -66,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () =>{
             `
 
             popularMovies.append(article)
+
             let genreElm = article.querySelector(".genres");
             movie.genre_ids.forEach(id => {
                
