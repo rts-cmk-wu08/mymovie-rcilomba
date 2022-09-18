@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () =>{
-
+    console.log(genres)
     let baseURL = "https://api.themoviedb.org/3";
     let apikey = "d6efc3cfd36ae94f20eb77ed991667a4";
 
@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     let popularHeader = document.createElement("header")
      popularHeader.innerHTML=`
+     
     <h2>Popular</h2>
     <a href="#">Show more</a>
     
@@ -39,6 +40,8 @@ document.addEventListener("DOMContentLoaded", () =>{
     `
     popularElm.append(popularHeader);
 
+
+    //polular movies showing here
     let popularMovies = document.createElement("div");
     popularElm.append(popularMovies)
 
@@ -63,6 +66,16 @@ document.addEventListener("DOMContentLoaded", () =>{
             `
 
             popularMovies.append(article)
+            let genreElm = article.querySelector(".genres");
+            movie.genre_ids.forEach(id => {
+               
+                let currentGenre = genres.find(genre => genre.id == id)
+                console.log(currentGenre)
+                let genreSpan = document.createElement("span")
+                genreSpan.classList.add("genre__pill")
+                genreSpan.innerText = currentGenre.name
+                genreElm.append(genreSpan)
+            })
         })
     })
 })
