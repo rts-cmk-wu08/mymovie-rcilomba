@@ -29,18 +29,33 @@ document.addEventListener("DOMContentLoaded", () =>{
     // now showing logic here
     let nowShowingElm = document.createElement("section");
     nowShowingElm.classList.add("nowShowing");
-    nowShowingElm.innerHTML=`
-    <img src="" alt="img">
-    <p>Movie title</p>
-
-    `
-
     mainElm.append(nowShowingElm);
 
-   
+    // let nowShowingDiv = document.createElement("div");
+    // nowShowingDiv.classList.add("nowShowing__container")
+    // mainElm.append(nowShowingDiv);
+
+
+    //fetch metod för att få fram API för now showing???
+    fetch(`${baseURL}/movie/now_playing=${apikey}`)
+    .then(response => response.json())
+    .then(data => {
+
+    //what should I write here???
+    // forEach to create element and  add data like row 34-36
+        
+    }) 
 
 
 
+
+    // nowShowingElm.innerHTML=`
+    // <img src="" alt="img">
+    // <p>Movie title</p>
+
+    // `
+
+    mainElm.append(nowShowingElm);
 
     //popular showing
     let popularElm = document.createElement("section");

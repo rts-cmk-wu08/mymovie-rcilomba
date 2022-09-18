@@ -2,3 +2,13 @@
     width: 375px;
 
 }
+
+/* Denna css ska filmerna under rubriken "Now Showing" ha */
+.pouplarmovies__container {
+    display: flex;
+    gap: 5%
+}
+
+.pouplarmovies__container img {
+    border-radius: 2%;
+}
