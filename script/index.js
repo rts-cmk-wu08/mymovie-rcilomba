@@ -125,7 +125,8 @@ let nowShowing = document.createElement("div");
             let article = document.createElement("article")
             article.classList.add("movie-article")
             article.innerHTML = `<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
-            <div>
+
+            <div class="">
                 <h3>${movie.title}</h3>
                 <p><i class="fa-sharp fa-solid fa-star"></i>${movie.vote_average}/10 IMDB</p>
                 <P class="genres"></p>

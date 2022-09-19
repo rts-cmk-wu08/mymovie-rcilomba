@@ -43,3 +43,12 @@ img {
     display: flex;
     justify-content: space-between;
 }
+
+.movie-article {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.movie-article img {
+    width: 85px;
+}
