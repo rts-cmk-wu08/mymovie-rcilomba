@@ -17,6 +17,10 @@ document.addEventListener("DOMContentLoaded", () =>{
     let footerElm = document.createElement("footer");
     wrapperElm.append(footerElm);
 
+    let myMoviesElm = document.createElement("div");
+    myMoviesElm.classList.add("myMovies")
+    mainElm.append(myMoviesElm);
+
     // content in the variables above
 
     //content in header section
@@ -34,7 +38,28 @@ document.addEventListener("DOMContentLoaded", () =>{
     
 
 
-   
+    //fetch metod för att få fram API för now showing???
+    fetch(`${baseURL}/movie/now_playing?=api_key${apikey}`)
+    .then(response => response.json())
+    .then(data => {
+
+    //what should I write here???
+    // forEach to create element and  add data like row 34-36
+
+    data.results.forEach(movie => {
+
+let nowShowing = document.createElement("div");
+    nowShowing.classList.add("nowShowing__container");
+        nowShowing.innerHTML=`
+        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
+        <P class="">movie title</p>
+        `
+
+        nowShowingElm.append(nowShowing)
+        
+    })
+    
+    }) 
 
 
 
