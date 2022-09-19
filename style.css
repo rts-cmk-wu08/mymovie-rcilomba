@@ -1,14 +1,28 @@
-.wrapper {
-    width: 375px;
-
+* {
+    padding: 0;
+    margin: 0;
 }
 
-/* Denna css ska filmerna under rubriken "Now Showing" ha */
+img {
+    width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+/* MyMovies */
+
+
 .myMovies {
     display: flex;
-    gap: 5%
+    gap: 2%;
+    overflow-x: auto;
 }
 
 .myMovies img {
-    border-radius: 2%;
+    border-radius: 7%;
+    width: 143px;
 }

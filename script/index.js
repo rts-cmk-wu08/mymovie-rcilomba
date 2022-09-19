@@ -25,8 +25,10 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     //content in header section
     headerElm.innerHTML=`
+    </div class="myMovies-header">
     <h1>MyMovies</h1>
     <button>switch</button>
+</div>
     `
 
 
@@ -101,7 +103,7 @@ let nowShowing = document.createElement("div");
             article.innerHTML = `<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
             <div>
                 <h3>${movie.title}</h3>
-                <p>${movie.vote_average}/10 IMDB</p>
+                <p><i class="fa-sharp fa-solid fa-star"></i>${movie.vote_average}/10 IMDB</p>
                 <P class="genres"></p>
         </div>
 
