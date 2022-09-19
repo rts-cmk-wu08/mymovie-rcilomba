@@ -4,11 +4,11 @@
 }
 
 /* Denna css ska filmerna under rubriken "Now Showing" ha */
-/* .pouplarmovies__container {
+.myMovies {
     display: flex;
     gap: 5%
-} */
+}
 
-/* .pouplarmovies__container img {
+.myMovies img {
     border-radius: 2%;
-} */
+}

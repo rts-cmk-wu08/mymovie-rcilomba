@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 
     //fetch metod för att få fram API för now showing???
-    fetch(`${baseURL}/movie/now_playing?=api_key${apikey}`)
+    fetch(`${baseURL}/movie/now_playing?api_key=${apikey}`)
     .then(response => response.json())
     .then(data => {
 
@@ -55,7 +55,7 @@ let nowShowing = document.createElement("div");
         <P class="">movie title</p>
         `
 
-        nowShowingElm.append(nowShowing)
+        myMoviesElm.append(nowShowing)
         
     })
     
