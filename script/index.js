@@ -21,15 +21,39 @@ document.addEventListener("DOMContentLoaded", () =>{
     myMoviesElm.classList.add("myMovies")
     mainElm.append(myMoviesElm);
 
+    /*let overHead = document.createElement("div");
+    overHead.classList.add("overHead");
+    headerElm.append(overHead);*/
+
     // content in the variables above
+
+   
+
 
     //content in header section
     headerElm.innerHTML=`
-    
-    <h1>MyMovies</h1>
-    <button>switch</button>
+    <div class="overHead">
+        <div class="">
+        <p>9.41</p>
+</div>
+<div class="overHead__icon">
+<i class="fa-solid fa-signal"></i>
+<i class="fa-solid fa-wifi"></i>
+<i class="fa-solid fa-battery-full"></i>
 
+</div>
+
+</div>
+
+<div class="moviesHeader">
+        
+<h1>MyMovies</h1>
+    <button>switch</button>
+</div>
+    
     `
+
+   
 
 
     // now showing logic here
@@ -76,7 +100,7 @@ let nowShowing = document.createElement("div");
 
     let popularHeader = document.createElement("header")
      popularHeader.innerHTML=`
-     <div class="">
+     <div class="popular-seeMore">
     <h2>Popular</h2>
     <a href="#">See more</a>
 </div>

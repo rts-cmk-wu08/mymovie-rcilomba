@@ -15,9 +15,17 @@ img {
 
 /* MyMovies */
 
-.header {
+.moviesHeader {
     display: flex;
+    justify-content: space-between;
 }
+
+.overHead {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 
 .myMovies {
     display: flex;
@@ -28,4 +36,10 @@ img {
 .myMovies img {
     border-radius: 7%;
     width: 143px;
+}
+
+/* pouplar */
+.popular-seeMore {
+    display: flex;
+    justify-content: space-between;
 }
