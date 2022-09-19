@@ -44,11 +44,22 @@ img {
     justify-content: space-between;
 }
 
+/* .pouplarmovies__container {
+    height: ;
+} */
+
 .movie-article {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    padding-left: 5%;
+    gap: 3%;
+
 }
 
 .movie-article img {
     width: 85px;
+}
+
+.fa-star {
+    color: #FFC319;
 }

@@ -130,6 +130,7 @@ let nowShowing = document.createElement("div");
                 <h3>${movie.title}</h3>
                 <p><i class="fa-sharp fa-solid fa-star"></i>${movie.vote_average}/10 IMDB</p>
                 <P class="genres"></p>
+                <P class="runtimes"></p>
         </div>
 
             
@@ -147,6 +148,9 @@ let nowShowing = document.createElement("div");
                 genreSpan.innerText = currentGenre.name
                 genreElm.append(genreSpan)
             })
+
+
+
         })
     })
 })
