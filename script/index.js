@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     //content in header section
     headerElm.innerHTML=`
-    </div class="myMovies-header">
+    
     <h1>MyMovies</h1>
     <button>switch</button>
-</div>
+
     `
 
 

@@ -15,6 +15,9 @@ img {
 
 /* MyMovies */
 
+.header {
+    display: flex;
+}
 
 .myMovies {
     display: flex;
