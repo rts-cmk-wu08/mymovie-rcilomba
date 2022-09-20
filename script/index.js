@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 let nowShowing = document.createElement("div");
 // adding link
-    nowShowing.setAttribute("href", `detail.html?id=${movie.title}`)
+    // nowShowing.setAttribute("href", `detail.html?id=${movie.title}`)
 
     nowShowing.classList.add("nowShowing__container");
         nowShowing.innerHTML=`
@@ -111,7 +111,7 @@ let nowShowing = document.createElement("div");
         
         
         data.results.forEach(movie => {
-            let article = document.createElement("a")
+            let article = document.createElement("article")
             // adding link
     article.setAttribute("href", `detail.html?id=${movie.title}`)
 

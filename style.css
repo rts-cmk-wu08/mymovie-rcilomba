@@ -13,17 +13,22 @@ img {
     margin: 0 auto;
 }
 
-/* MyMovies */
-
-.moviesHeader {
-    display: flex;
-    justify-content: space-between;
+a {
+    text-decoration: none;
 }
 
+/* MyMovies */
+
+.moviesHeader,
 .overHead {
     display: flex;
     justify-content: space-between;
 }
+
+/* .overHead {
+    display: flex;
+    justify-content: space-between;
+}*/
 
 
 
@@ -72,9 +77,6 @@ img {
     color: #88A4E8;
     background-color: #DBE3FF;
     border-radius: 3%;
-
-
-
 }
 
 .footer-icon {
