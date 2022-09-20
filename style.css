@@ -50,9 +50,9 @@ img {
 
 .movie-article {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding-left: 5%;
-    gap: 3%;
+    /* gap: 3%; */
 
 }
 
@@ -60,6 +60,27 @@ img {
     width: 85px;
 }
 
+.movie-title {
+    color: #9C9C9C;
+}
+
 .fa-star {
     color: #FFC319;
 }
+
+.genres {
+    color: #88A4E8;
+    background-color: #DBE3FF;
+    border-radius: 3%;
+
+
+
+}
+
+.footer-icon {
+    font-size: 2em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* DARKMODE */

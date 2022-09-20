@@ -21,9 +21,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     myMoviesElm.classList.add("myMovies")
     mainElm.append(myMoviesElm);
 
-    /*let overHead = document.createElement("div");
-    overHead.classList.add("overHead");
-    headerElm.append(overHead);*/
+
 
     // content in the variables above
 
@@ -32,21 +30,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     //content in header section
     headerElm.innerHTML=`
-    <div class="overHead">
-        <div class="">
-        <p>9.41</p>
-</div>
-<div class="overHead__icon">
-<i class="fa-solid fa-signal"></i>
-<i class="fa-solid fa-wifi"></i>
-<i class="fa-solid fa-battery-full"></i>
-
-</div>
-
-</div>
-
 <div class="moviesHeader">
-        
 <h1>MyMovies</h1>
     <button>switch</button>
 </div>
@@ -75,10 +59,13 @@ document.addEventListener("DOMContentLoaded", () =>{
     data.results.forEach(movie => {
 
 let nowShowing = document.createElement("div");
+// adding link
+    nowShowing.setAttribute("href", `detail.html?id=${movie.title}`)
+    
     nowShowing.classList.add("nowShowing__container");
         nowShowing.innerHTML=`
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
-        <P class="">movie title</p>
+        <P class="">${movie.title}</p>
         `
 
         myMoviesElm.append(nowShowing)
@@ -88,10 +75,9 @@ let nowShowing = document.createElement("div");
     }) 
 
 
-
-
-
     mainElm.append(nowShowingElm);
+
+
 
     //popular showing
     let popularElm = document.createElement("section");
@@ -108,9 +94,13 @@ let nowShowing = document.createElement("div");
     `
     popularElm.append(popularHeader);
 
+   
+    
+
 
     //polular movies showing here
     let popularMovies = document.createElement("div");
+    
     popularMovies.classList.add("pouplarmovies__container")
     popularElm.append(popularMovies)
 
@@ -128,7 +118,7 @@ let nowShowing = document.createElement("div");
 
             <div class="">
                 <h3>${movie.title}</h3>
-                <p><i class="fa-sharp fa-solid fa-star"></i>${movie.vote_average}/10 IMDB</p>
+                <p class="movie-title"><i class="fa-sharp fa-solid fa-star"></i>${movie.vote_average}/10 IMDB</p>
                 <P class="genres"></p>
                 <P class="runtimes"></p>
         </div>
@@ -148,6 +138,17 @@ let nowShowing = document.createElement("div");
                 genreSpan.innerText = currentGenre.name
                 genreElm.append(genreSpan)
             })
+
+            // footer
+            footerElm.classList.add("footer-icon")
+            footerElm.innerHTML=`
+            
+            <i class="fa-solid fa-film"></i>
+            <i class="fa-regular fa-bookmark"></i>
+            <i class="fa-regular fa-bookmark"></i>
+            `
+
+
 
 
 
