@@ -48,24 +48,23 @@ document.addEventListener("DOMContentLoaded", () =>{
     
 
 
-    //fetch metod för att få fram API för now showing???
+    //fetch metod för att få fram API för now showing
     fetch(`${baseURL}/movie/now_playing?api_key=${apikey}`)
     .then(response => response.json())
     .then(data => {
 
-    //what should I write here???
-    // forEach to create element and  add data like row 34-36
+   
 
     data.results.forEach(movie => {
 
 let nowShowing = document.createElement("div");
 // adding link
     nowShowing.setAttribute("href", `detail.html?id=${movie.title}`)
-    
+
     nowShowing.classList.add("nowShowing__container");
         nowShowing.innerHTML=`
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
-        <P class="">${movie.title}</p>
+        <p class="">${movie.title}</p>
         `
 
         myMoviesElm.append(nowShowing)
@@ -112,13 +111,16 @@ let nowShowing = document.createElement("div");
         
         
         data.results.forEach(movie => {
-            let article = document.createElement("article")
+            let article = document.createElement("a")
+            // adding link
+    article.setAttribute("href", `detail.html?id=${movie.title}`)
+
             article.classList.add("movie-article")
             article.innerHTML = `<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
 
             <div class="">
-                <h3>${movie.title}</h3>
-                <p class="movie-title"><i class="fa-sharp fa-solid fa-star"></i>${movie.vote_average}/10 IMDB</p>
+                <h3><a href="details.html?id=${movie.title}">${movie.title}</a></h3>
+                <a class="movie-title"><i class="fa-sharp fa-solid fa-star"></i>${movie.vote_average}/10 IMDB</p>
                 <P class="genres"></p>
                 <P class="runtimes"></p>
         </div>
