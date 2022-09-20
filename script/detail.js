@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log(id)
 
-    
     let wrapperElm = document.querySelector(".wrapper");
 
-    //createing elements, main etc and append them on the detail site
+
+        //createing elements, main etc and append them on the detail site
     let headerElm = document.createElement("header");
     headerElm.classList.add("header");
     wrapperElm.append(headerElm);
@@ -19,10 +19,36 @@ document.addEventListener("DOMContentLoaded", () => {
     let footerElm = document.createElement("footer");
     wrapperElm.append(footerElm);
 
-    headerElm.innerHTML=`
+
+    // testar
+    fetch(`/data/${id}.json`)
+    .then(response => response.json())
+    .then(data => {
+
     
+    let descriptionSection = document.createElement("section");
+    descriptionSection.classList.add("description");
+    descriptionSection.innerHTML=`
+
+        <p class="">${data.title}</p>
     `
+    wrapperElm.append(descriptionSection);
+
+    })
+
+    //testar ovan
+
+   
+
+ }) 
+
+    
+
+    
+
+    
     
 
 
-})
+
+
