@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //createing elements, main etc and append them on the detail site
     let headerElm = document.createElement("header");
-    headerElm.classList.add("header");
+    headerElm.classList.add("movieHeader");
     wrapperElm.append(headerElm);
 
     let mainElm = document.createElement("main");
@@ -23,9 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let footerElm = document.createElement("footer");
     wrapperElm.append(footerElm);
 
+    
 
     // testar
-    fetch(`${baseURL}${id}?api_key=${apikey}`)
+    fetch(`${baseURL}/movie/${id}?api_key=${apikey}`)
     .then(response => response.json())
     .then(data => {
 
@@ -33,10 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let descriptionSection = document.createElement("section");
     descriptionSection.classList.add("description");
     descriptionSection.innerHTML=`
-
         <p class="">${data.title}</p>
     `
-    wrapperElm.append(descriptionSection);
+    mainElm.append(descriptionSection);
 
     })
 

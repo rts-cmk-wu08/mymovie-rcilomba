@@ -113,13 +113,13 @@ let nowShowing = document.createElement("div");
         data.results.forEach(movie => {
             let article = document.createElement("article")
             // adding link
-    article.setAttribute("href", `detail.html?id=${movie.title}`)
+    article.setAttribute("href", `detail.html?id=${movie.id}`)
 
             article.classList.add("movie-article")
             article.innerHTML = `<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
 
             <div class="">
-                <h3><a href="details.html?id=${movie.title}">${movie.title}</a></h3>
+                <h3><a href="details.html?id=${movie.id}">${movie.title}</a></h3>
                 <a class="movie-title"><i class="fa-sharp fa-solid fa-star"></i>${movie.vote_average}/10 IMDB</p>
                 <P class="genres"></p>
                 <P class="runtimes"></p>
