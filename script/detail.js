@@ -3,7 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let params = new URLSearchParams(window.location.search);
     let id = params.get("id");
 
+    let baseURL ="https://api.themoviedb.org/3";
+    let apikey ="d6efc3cfd36ae94f20eb77ed991667a4";
+
     console.log(id)
+    // console.log("test" + id);
 
     let wrapperElm = document.querySelector(".wrapper");
 
@@ -21,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // testar
-    fetch(`/data/${id}.json`)
+    fetch(`${baseURL}${id}?api_key=${apikey}`)
     .then(response => response.json())
     .then(data => {
 
@@ -36,11 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     })
 
-    //testar ovan
-
-   
-
  }) 
+
 
     
 
