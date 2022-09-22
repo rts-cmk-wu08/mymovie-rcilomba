@@ -32,7 +32,12 @@ document.addEventListener("DOMContentLoaded", () =>{
     headerElm.innerHTML=`
 <div class="moviesHeader">
 <h1>MyMovies</h1>
-    <button>switch</button>
+    <!-- <button>switch</button> -->
+
+    <label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
 </div>
     
     `
