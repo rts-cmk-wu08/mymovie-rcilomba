@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () =>{
     let apikey = "d6efc3cfd36ae94f20eb77ed991667a4";
 
     let wrapperElm = document.querySelector(".wrapper");
+
+    
     
 
     //creating elements, main etc and append them on the site

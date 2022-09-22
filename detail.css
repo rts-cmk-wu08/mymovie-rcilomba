@@ -44,7 +44,8 @@ p {
 
 
 .castHeader__container,
-.movieHeader__container {
+.movieHeader__container,
+.movieTitleStart {
     display: flex;
     justify-content: space-between;
 

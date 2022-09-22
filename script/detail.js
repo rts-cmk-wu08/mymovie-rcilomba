@@ -32,12 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
 
        
-        
-    
-        
-    
-
-
+        // test forEach
+        // data.results.forEach(movie => {
 
     let movieHeader =document.createElement("div");
     movieHeader.classList.add("movieHeader");
@@ -54,9 +50,11 @@ document.addEventListener("DOMContentLoaded", () => {
 </label>
     </div>
     </div>
-    <!-- link på video?  -->
+    <!-- ersätt img med video trailer istället  -->
+    <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title} poster">
     `
     headerElm.append(movieHeader);
+
 
 
 
@@ -64,11 +62,17 @@ document.addEventListener("DOMContentLoaded", () => {
     movieTitle.classList.add("movieTitle");
     movieTitle.innerHTML=`
     <div class="movieTitleStart">
-<h1>${data.title}</h1>
-    <i class="fa-sharp fa-solid fa-star"></i>
+        <div class="movieTitleStartBox">
+        <h1>${data.title}</h1>
+    </div>
+    <div class="movieTitleStartBox">
+<i class="fa-regular fa-bookmark"></i>
+    </div>
+
     </div>
 
     
+    <i class="fa-sharp fa-solid fa-star"></i>
 
 
     <div class="movieInfo__container">
@@ -89,11 +93,15 @@ document.addEventListener("DOMContentLoaded", () => {
     `
     mainElm.append(movieTitle);
 
+    // skapa en fetch metod för att få fram api för description
+    
+    
+
     let descriptionSection = document.createElement("section");
     descriptionSection.classList.add("description");
     descriptionSection.innerHTML=`
     <h2>Description</h2>
-        
+         <p>${data.description}</p>
     `
     mainElm.append(descriptionSection);
 
@@ -108,11 +116,16 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     </div>
-    <p>${data.description}</p>
+   
+
+    <div class="cast__container">
+
+    </div>
     `
 
     footerElm.append(cast);
 
+        // })
 
     })
 
