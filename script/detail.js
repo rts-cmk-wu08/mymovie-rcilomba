@@ -35,12 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
     
         
-    let descriptionSection = document.createElement("section");
-    descriptionSection.classList.add("description");
-    descriptionSection.innerHTML=`
-        
-    `
-    mainElm.append(descriptionSection);
+    
 
 
 
@@ -48,10 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
     movieHeader.classList.add("movieHeader");
     movieHeader.innerHTML=`
     <!-- link på video?  -->
-    
     `
-
     headerElm.append(movieHeader);
+
+
 
     let movieTitle = document.createElement("div");
     movieTitle.classList.add("movieTitle");
@@ -75,6 +70,24 @@ document.addEventListener("DOMContentLoaded", () => {
     
     `
     mainElm.append(movieTitle);
+
+    let descriptionSection = document.createElement("section");
+    descriptionSection.classList.add("description");
+    descriptionSection.innerHTML=`
+    <h2>Description</h2>
+        
+    `
+    mainElm.append(descriptionSection);
+
+    let cast = document.createElement("div");
+    cast.innerHTML=`
+    <div class="castHeader__container">
+
+    </div>
+    <p>test</p>
+    `
+
+    footerElm.append(cast);
 
 
     })
