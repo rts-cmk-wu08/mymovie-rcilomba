@@ -42,6 +42,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let movieHeader =document.createElement("div");
     movieHeader.classList.add("movieHeader");
     movieHeader.innerHTML=`
+    <div class="movieHeader__container">
+         <div class="movieHeader__containerBox">
+            <i class="fa-solid fa-arrow-left"></i>
+    </div>
+
+     <div class="movieHeader__containerBox">
+        <label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+    </div>
+    </div>
     <!-- link på video?  -->
     `
     headerElm.append(movieHeader);
@@ -51,19 +63,25 @@ document.addEventListener("DOMContentLoaded", () => {
     let movieTitle = document.createElement("div");
     movieTitle.classList.add("movieTitle");
     movieTitle.innerHTML=`
-    <h1 class="">${data.title}</h1>
+    <div class="movieTitleStart">
+<h1>${data.title}</h1>
     <i class="fa-sharp fa-solid fa-star"></i>
+    </div>
+
+    
+
+
     <div class="movieInfo__container">
         <div class="movieInfo__containerbox">
-            <p>Length</p>
+            <p class="grey">Length</p>
     </div>
 
      <div class="movieInfo__containerbox">
-            <p>Language</p>
+            <p class="grey">Language</p>
     </div>
 
      <div class="movieInfo__containerbox">
-            <p>Rating</p>
+            <p class="grey">Rating</p>
     </div>
 
     </div>
@@ -82,9 +100,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let cast = document.createElement("div");
     cast.innerHTML=`
     <div class="castHeader__container">
+        <div class="castHeader__containerBox">
+        <h2>Cast</h2>
+    </div>
+    <div class="castHeader__containerBox">
+        <button>See more</button>    
+    </div>
 
     </div>
-    <p>test</p>
+    <p>${data.description}</p>
     `
 
     footerElm.append(cast);
