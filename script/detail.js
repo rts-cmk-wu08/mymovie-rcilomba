@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //createing elements, main etc and append them on the detail site
     let headerElm = document.createElement("header");
-    headerElm.classList.add("movieHeader");
+    // headerElm.classList.add("movieHeader");
+    
     wrapperElm.append(headerElm);
 
     let mainElm = document.createElement("main");
@@ -30,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(response => response.json())
     .then(data => {
 
+       
+        
     
     let descriptionSection = document.createElement("section");
     descriptionSection.classList.add("description");
@@ -37,6 +40,15 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="">${data.title}</p>
     `
     mainElm.append(descriptionSection);
+
+    let movieHeader =document.createElement("div");
+    movieHeader.classList.add("movieHeader");
+    movieHeader.innerHTML=`
+    <h1 class="">${data.title}</h1>
+    `
+
+    headerElm.append(movieHeader);
+
 
     })
 
