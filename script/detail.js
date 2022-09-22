@@ -34,20 +34,47 @@ document.addEventListener("DOMContentLoaded", () => {
        
         
     
+        
     let descriptionSection = document.createElement("section");
     descriptionSection.classList.add("description");
     descriptionSection.innerHTML=`
-        <p class="">${data.title}</p>
+        
     `
     mainElm.append(descriptionSection);
+
+
 
     let movieHeader =document.createElement("div");
     movieHeader.classList.add("movieHeader");
     movieHeader.innerHTML=`
-    <h1 class="">${data.title}</h1>
+    <!-- link på video?  -->
+    
     `
 
     headerElm.append(movieHeader);
+
+    let movieTitle = document.createElement("div");
+    movieTitle.classList.add("movieTitle");
+    movieTitle.innerHTML=`
+    <h1 class="">${data.title}</h1>
+    <i class="fa-sharp fa-solid fa-star"></i>
+    <div class="movieInfo__container">
+        <div class="movieInfo__containerbox">
+            <p>Length</p>
+    </div>
+
+     <div class="movieInfo__containerbox">
+            <p>Language</p>
+    </div>
+
+     <div class="movieInfo__containerbox">
+            <p>Rating</p>
+    </div>
+
+    </div>
+    
+    `
+    mainElm.append(movieTitle);
 
 
     })
