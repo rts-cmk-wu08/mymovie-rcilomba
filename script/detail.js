@@ -96,11 +96,13 @@ document.addEventListener("DOMContentLoaded", () => {
     `
     mainElm.append(movieTitle);
 
-    // skapa en fetch metod för att få fram api för description
-    
-    
+    // skapa en fetch metod för att få fram api för description och cast
 
-    let descriptionSection = document.createElement("section");
+    fetch(`${baseURL}/movie/${movie_id}/credits?api_key=${apikey}`)
+    .then(response => response.json())
+    .then (data =>{
+
+        let descriptionSection = document.createElement("section");
     descriptionSection.classList.add("description");
     descriptionSection.innerHTML=`
     <h2>Description</h2>
@@ -119,26 +121,30 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     </div>
+
+  
    
 <!-- cast  -->
+
+        
     <div class="cast__container">
         <div class="cast__containerBox">
-            <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title} poster">
+            <img src="https://image.tmdb.org/t/p/w500${data.id}" alt="${data.title} poster">
             <p>${data.people}</p>
     </div>
 
     <div class="cast__containerBox">
-<img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title} poster">
+<img src="" alt="${data.title} poster">
 <p></p> 
     </div>
 
     <div class="cast__containerBox">
-<img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title} poster">
+<img src="" alt="${data.title} poster">
 <p></p>
     </div>
 
     <div class="cast__containerBox">
-<img src="https://image.tmdb.org/t/p/w500${data.credit_id}" alt="${data.title} poster">
+<img src="" alt="${data.title} poster">
 <p></p>
     </div>
     
@@ -148,11 +154,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     footerElm.append(cast);
 
-        // })
+
+    })
+    
+    
+
+    
+        })
 
     })
 
- }) 
+ 
 
 
     
