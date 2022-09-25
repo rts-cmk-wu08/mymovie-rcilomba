@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(response => response.json())
     .then(data => {
 
+        // console.log(data)
+
        
         // test forEach
         // data.results.forEach(movie => {
@@ -55,9 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
     `
     headerElm.append(movieHeader);
 
-
-
-
+        // fetch for length, language and rating
+ 
+        
     let movieTitle = document.createElement("div");
     movieTitle.classList.add("movieTitle");
     movieTitle.innerHTML=`
@@ -72,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     
-    <i class="fa-sharp fa-solid fa-star"></i>
+    <i class="fa-sharp fa-solid fa-star">${data.vote_average}</i>
 
 
     <div class="movieInfo__container">
@@ -98,9 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // skapa en fetch metod för att få fram api för description och cast
 
-    fetch(`${baseURL}/movie/${movie_id}/credits?api_key=${apikey}`)
+    fetch(`${baseURL}/movie/${id}/credits?api_key=${apikey}`)
     .then(response => response.json())
     .then (data =>{
+
+        console.log(data)
 
         let descriptionSection = document.createElement("section");
     descriptionSection.classList.add("description");
