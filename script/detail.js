@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="movieInfo__container">
         <div class="movieInfo__containerbox">
             <p class="grey">Length</p>
-            <p>${data.length}</p>
+            <p>${data.runtime}</p>
     </div>
 
      <div class="movieInfo__containerbox">
@@ -98,6 +98,18 @@ document.addEventListener("DOMContentLoaded", () => {
     `
     mainElm.append(movieTitle);
 
+    let descriptionSection = document.createElement("section");
+    descriptionSection.classList.add("description");
+    descriptionSection.innerHTML=`
+    <h2>Description</h2>
+         <p>${data.overview}</p>
+    `
+    mainElm.append(descriptionSection);
+
+
+
+    
+
     // skapa en fetch metod för att få fram api för description och cast
 
     fetch(`${baseURL}/movie/${id}/credits?api_key=${apikey}`)
@@ -106,13 +118,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         console.log(data)
 
-        let descriptionSection = document.createElement("section");
+        /*let descriptionSection = document.createElement("section");
     descriptionSection.classList.add("description");
     descriptionSection.innerHTML=`
     <h2>Description</h2>
-         <p>${data.description}</p>
+         <p>${data.biography}</p>
     `
-    mainElm.append(descriptionSection);
+    mainElm.append(descriptionSection); */
 
     let cast = document.createElement("div");
     cast.innerHTML=`
