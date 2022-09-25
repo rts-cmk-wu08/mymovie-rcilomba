@@ -41,6 +41,11 @@ document.addEventListener("DOMContentLoaded", () =>{
   <span class="slider round"></span>
 </label>
 </div>
+
+<div class="nowShowing-seeMore">
+    <h2>Now Showing</h2>
+    <a href="#">See more</a>
+</div>
     
     `
 
@@ -50,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     // now showing logic here
     let nowShowingElm = document.createElement("section");
     nowShowingElm.classList.add("nowShowing");
+    
     mainElm.append(nowShowingElm);
 
     
@@ -70,8 +76,10 @@ let nowShowing = document.createElement("div");
 
     nowShowing.classList.add("nowShowing__container");
         nowShowing.innerHTML=`
+         
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
         <p class="">${movie.title}</p>
+        <p><i class="fa-sharp fa-solid fa-star"></i>${movie.vote_average}/10 IMDB</p>
         `
 
         myMoviesElm.append(nowShowing)

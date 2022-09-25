@@ -24,6 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let footerElm = document.createElement("footer");
     wrapperElm.append(footerElm);
 
+    //skapa en fetch till video?
+    //https://developers.themoviedb.org/3/movies/get-movie-videos
+
     
 
     // testar
@@ -42,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     movieHeader.innerHTML=`
     <div class="movieHeader__container">
          <div class="movieHeader__containerBox">
-            <i class="fa-solid fa-arrow-left"></i>
+            <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
     </div>
 
      <div class="movieHeader__containerBox">
@@ -74,28 +77,30 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     
-    <i class="fa-sharp fa-solid fa-star">${data.vote_average}</i>
+    <p><i class="fa-sharp fa-solid fa-star"></i>${data.vote_average}10 IMDB</p>
+    <P class="genres"></p>
 
 
     <div class="movieInfo__container">
         <div class="movieInfo__containerbox">
             <p class="grey">Length</p>
-            <p>${data.runtime}</p>
+            <p>${data.runtime} min</p>
     </div>
 
      <div class="movieInfo__containerbox">
             <p class="grey">Language</p>
-            <p></p>
+            <p>${data.original_language}</p>
     </div>
 
      <div class="movieInfo__containerbox">
             <p class="grey">Rating</p>
-            <p></p>
+            <p>${data.vote_count}</p>
     </div>
 
     </div>
     
     `
+    
     mainElm.append(movieTitle);
 
     let descriptionSection = document.createElement("section");
@@ -110,21 +115,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
 
-    // skapa en fetch metod för att få fram api för description och cast
+    // skapa en fetch metod för att få fram api för cast
 
     fetch(`${baseURL}/movie/${id}/credits?api_key=${apikey}`)
     .then(response => response.json())
-    .then (data =>{
+    .then (data => {
 
-        console.log(data)
-
-        /*let descriptionSection = document.createElement("section");
-    descriptionSection.classList.add("description");
-    descriptionSection.innerHTML=`
-    <h2>Description</h2>
-         <p>${data.biography}</p>
-    `
-    mainElm.append(descriptionSection); */
+        console.log("2" + data)
+    
 
     let cast = document.createElement("div");
     cast.innerHTML=`
@@ -133,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <h2>Cast</h2>
     </div>
     <div class="castHeader__containerBox">
-        <button>See more</button>    
+        <a href="">See more</a>    
     </div>
 
     </div>
@@ -146,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="cast__container">
         <div class="cast__containerBox">
             <img src="https://image.tmdb.org/t/p/w500${data.id}" alt="${data.title} poster">
-            <p>${data.people}</p>
+            <p>${data.original_name}</p>
     </div>
 
     <div class="cast__containerBox">
