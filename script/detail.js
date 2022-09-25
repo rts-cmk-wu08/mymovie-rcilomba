@@ -78,14 +78,17 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="movieInfo__container">
         <div class="movieInfo__containerbox">
             <p class="grey">Length</p>
+            <p>${data.length}</p>
     </div>
 
      <div class="movieInfo__containerbox">
             <p class="grey">Language</p>
+            <p></p>
     </div>
 
      <div class="movieInfo__containerbox">
             <p class="grey">Rating</p>
+            <p></p>
     </div>
 
     </div>
@@ -117,8 +120,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     </div>
    
-
+<!-- cast  -->
     <div class="cast__container">
+        <div class="cast__containerBox">
+            <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title} poster">
+            <p>${data.people}</p>
+    </div>
+
+    <div class="cast__containerBox">
+<img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title} poster">
+<p></p> 
+    </div>
+
+    <div class="cast__containerBox">
+<img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title} poster">
+<p></p>
+    </div>
+
+    <div class="cast__containerBox">
+<img src="https://image.tmdb.org/t/p/w500${data.credit_id}" alt="${data.title} poster">
+<p></p>
+    </div>
+    
 
     </div>
     `

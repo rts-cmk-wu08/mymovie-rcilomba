@@ -50,3 +50,9 @@ p {
     justify-content: space-between;
 
 }
+
+/* cast section */
+.cast__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
