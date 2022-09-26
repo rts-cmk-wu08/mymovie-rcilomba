@@ -46,6 +46,11 @@ main {
 
 }
 
+.movieTitleStart {
+
+    padding-bottom: 1em;
+}
+
 .movieInfo__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -104,6 +109,24 @@ main {
 }
 
 .description p {
+    padding-top: 1em;
     color: #9C9C9C;
 
+}
+
+.movieInfo__container {
+    padding-top: 1.5em;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1%;
+    padding-top: 2em;
+}
+
+footer img {
+    border-radius: 15px;
+    /* height: 72px;
+    width: 72px; */
 }

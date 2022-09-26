@@ -22,7 +22,9 @@ a {
     text-decoration: none;
 }
 
-
+.grey {
+    color: #9C9C9C;
+}
 
 .moviesHeader h1,
 .nowShowing-seeMore,
@@ -46,7 +48,12 @@ a {
     justify-content: space-between;
 }
 
+.nowShowing__container a {
+    color: #000;
+    font-family: 'Mulish', sans-serif;
 
+
+}
 
 .myMovies {
     display: flex;
@@ -98,6 +105,13 @@ a {
     padding-bottom: 5%;
 
 }
+
+.movie-article a {
+    font-family: 'Mulish', sans-serif;
+    color: #000;
+}
+
+
 
 .movie-article img {
     width: 85px;
