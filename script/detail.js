@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(id);
   // console.log("test" + id);
 
+  //convert time to hour and minutes
+  function Convert(num) {
+    h = Math.floor(num / 60);
+    m = num / 60;
+    return (h + "hours" + ":" + m + "minutes").toString();
+  }
+
+  console.log(Convert(60));
+
   let wrapperElm = document.querySelector(".wrapper");
 
   //createing elements, main etc and append them on the detail site
