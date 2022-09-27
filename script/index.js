@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <label class="switch">
   <input type="checkbox">
-  <span class="slider round"></span>
+  <span class="slider round" data-mode="light" data-mode="dark"></span>
 </label>
 </div>
 
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch(`${baseURL}/movie/popular?api_key=${apikey}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.results[0]);
+      // console.log(data.results[0]);
 
       data.results.forEach((movie) => {
         let article = document.createElement("article");
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let genreElm = article.querySelector(".genres");
         movie.genre_ids.forEach((id) => {
           let currentGenre = genres.find((genre) => genre.id == id);
-          console.log(currentGenre);
+          // console.log(currentGenre);
           let genreSpan = document.createElement("span");
           genreSpan.classList.add("genre__pill");
           genreSpan.innerText = currentGenre.name;
