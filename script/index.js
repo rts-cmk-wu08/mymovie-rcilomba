@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- <button>switch</button> -->
 
     <label class="switch">
-  <input type="checkbox">
-  <span class="slider round" data-mode="light" data-mode="dark"></span>
+  <input type="checkbox" data-mode="light" data-mode="dark">
+  <span class="slider round"></span>
 </label>
 </div>
 

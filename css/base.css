@@ -125,10 +125,24 @@ a {
     color: #FFC319;
 }
 
-.genres {
+/* .genres {
     color: #88A4E8;
     background-color: #DBE3FF;
     border-radius: 3%;
+    padding-right: 5%;
+
+} */
+
+.genre__pill {
+    padding-right: 5%;
+    color: #88A4E8;
+    background-color: #DBE3FF;
+    border-radius: 10px;
+    /* padding: 3px; */
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    margin-left: 5%;
 }
 
 .footer-icon {

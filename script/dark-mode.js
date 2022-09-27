@@ -7,9 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let activeSheet = document.querySelector(selector);
     activeSheet.disabled = false;
     console.log(activeSheet);
+    //   memorizing the selected theme
+    localStorage.setItem("theme", title);
   };
 
-  setActiveStyleSheet("light");
+  let savedSheet = localStorage.getItem("theme");
+  console.log(savedSheet);
+  setActiveStyleSheet("dark");
 
   //adding variables for dark and light mode by select data-mode
 
@@ -24,4 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
   darkBtnElm.addEventListener("click", function () {
     setActiveStyleSheet("dark");
   });
+
+  console.log(darkBtnElm);
 });
