@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let lightBtnElm = document.querySelector("[data-mode=light]");
   let darkBtnElm = document.querySelector("[data-mode=dark]");
 
+  //function to change to light when clicking
   lightBtnElm.addEventListener("click", function () {
     setActiveStyleSheet("light");
   });
