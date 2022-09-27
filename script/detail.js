@@ -110,12 +110,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
           data.cast.forEach((member, index) => {
             let castElm = document.createElement("div");
+
             castElm.innerHTML = `
+
+           
             <img src="https://image.tmdb.org/t/p/w500/${member.profile_path}" alt="">
             <p>${member.original_name}</p>
+          
             `;
-
-            // footerElm.append(castElm);
 
             // if statement if cast is more than 4
             if (index < 4) {

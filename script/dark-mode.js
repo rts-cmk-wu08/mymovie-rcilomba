@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let savedSheet = localStorage.getItem("theme");
   console.log(savedSheet);
-  setActiveStyleSheet("dark");
+  setActiveStyleSheet("light");
 
   //adding variables for dark and light mode by select data-mode
 

@@ -85,6 +85,11 @@ a {
 }
 
 /* pouplar */
+
+.popular-seeMore {
+    padding-top: 30px;
+}
+
 .popular-seeMore,
 .nowShowing-seeMore {
     display: flex;
@@ -98,10 +103,10 @@ a {
     border-radius: 5%;
 }
 
+
 .movie-article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding-left: 5%;
     padding-bottom: 5%;
 
 }
@@ -117,6 +122,7 @@ a {
     width: 85px;
 }
 
+
 .movie-title {
     color: #9C9C9C;
 }
@@ -125,13 +131,7 @@ a {
     color: #FFC319;
 }
 
-/* .genres {
-    color: #88A4E8;
-    background-color: #DBE3FF;
-    border-radius: 3%;
-    padding-right: 5%;
 
-} */
 
 .genre__pill {
     padding-right: 5%;
@@ -143,6 +143,10 @@ a {
     padding-bottom: 3px;
     padding-left: 6px;
     margin-left: 5%;
+}
+
+footer {
+    padding-bottom: 30px;
 }
 
 .footer-icon {

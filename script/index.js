@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- <button>switch</button> -->
 
     <label class="switch">
-  <input type="checkbox" data-mode="light" data-mode="dark">
-  <span class="slider round"></span>
+  <input type="checkbox" data-mode="dark">
+  <span class="slider round" data-mode="light"></span>
 </label>
 </div>
 
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
         article.classList.add("movie-article");
         article.innerHTML = `<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
 
-            <div class="">
+            <div class="movie-article__content">
                 <a href="details.html?id=${movie.id}">${movie.title}</a>
                 <p class="movie-title grey"><i class="fa-sharp fa-solid fa-star"></i>${movie.vote_average}/10 IMDB</p>
                 <P class="genres"></p>
