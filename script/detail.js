@@ -101,6 +101,14 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
       mainElm.append(descriptionSection);
 
+      let castHeader = document.createElement("div");
+      castHeader.classList.add("castHeader");
+      castHeader.innerHTML = `
+       <h2>Cast</h2>
+       <a href="#">See more</a>
+       `;
+      mainElm.append(castHeader);
+
       // skapa en fetch metod för att få fram api för cast
 
       fetch(`${baseURL}/movie/${id}/credits?api_key=${apikey}`)

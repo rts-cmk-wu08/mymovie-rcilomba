@@ -118,6 +118,21 @@ main {
     padding-top: 1.5em;
 }
 
+.castHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2em;
+}
+
+.castHeader a {
+    color: #AAA9B1;
+    border: #9C9C9C solid 1px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    border-radius: 34px;
+}
+
 footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

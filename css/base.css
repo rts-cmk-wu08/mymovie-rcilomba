@@ -45,7 +45,7 @@ a {
 
 .overHead {
     display: flex;
-    justify-content: space-between;
+justify-content: space-between;
 }
 
 .nowShowing__container a {
