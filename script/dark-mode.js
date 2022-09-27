@@ -9,5 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(activeSheet);
   };
 
-  setActiveStyleSheet("dark");
+  setActiveStyleSheet("light");
+
+  //adding variables for dark and light mode by select data-mode
+
+  let lightBtnElm = document.querySelector("[data-mode=light]");
+  let darkBtnElm = document.querySelector("[data-mode=dark]");
+
+  lightBtnElm.addEventListener("click", function () {
+    setActiveStyleSheet("light");
+  });
+
+  darkBtnElm.addEventListener("click", function () {
+    setActiveStyleSheet("dark");
+  });
 });
