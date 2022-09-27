@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Mulish:wght@200;500&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.grey {
+    color: #9C9C9C;
+}
+
+.moviesHeader h1,
+.nowShowing-seeMore,
+.popular-seeMore h2 {
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+
+/* MyMovies */
+
+.moviesHeader {
+    display: flex;
+    gap: 15%;
+    justify-content: flex-end;
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
+
+.overHead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nowShowing__container a {
+    color: #000;
+    font-family: 'Mulish', sans-serif;
+
+
+}
+
+.myMovies {
+    display: flex;
+    gap: 2%;
+    overflow-x: auto;
+}
+
+.myMovies img {
+    border-radius: 7%;
+    width: 143px;
+}
+
+/* now showing */
+.nowShowing__container p {
+    font-family: 'Mulish', sans-serif;
+}
+
+/* see more button */
+.popular-seeMore a,
+.nowShowing-seeMore a {
+    color: #AAA9B1;
+    border: #9C9C9C solid 1px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    border-radius: 34px;
+
+
+}
+
+/* pouplar */
+.popular-seeMore,
+.nowShowing-seeMore {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.movie-article img {
+    border-radius: 5%;
+}
+
+.movie-article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 5%;
+    padding-bottom: 5%;
+
+}
+
+.movie-article a {
+    font-family: 'Mulish', sans-serif;
+    color: #000;
+}
+
+
+
+.movie-article img {
+    width: 85px;
+}
+
+.movie-title {
+    color: #9C9C9C;
+}
+
+.fa-star {
+    color: #FFC319;
+}
+
+.genres {
+    color: #88A4E8;
+    background-color: #DBE3FF;
+    border-radius: 3%;
+}
+
+.footer-icon {
+    font-size: 2em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* DARKMODE */
