@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
   //convert time to hour and minutes
   function Convert(num) {
     h = Math.floor(num / 60);
-    m = num / 60;
-    return (h + "hours" + ":" + m + "minutes").toString();
+    m = num % 60;
+    return (h + "h" + ":" + m + "min").toString();
   }
 
   console.log(Convert(60));
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="movieInfo__container">
         <div class="movieInfo__containerbox">
             <p class="grey">Length</p>
-            <p>${data.runtime} min</p>
+            <p>${Convert(data.runtime)}</p>
     </div>
 
      <div class="movieInfo__containerbox">

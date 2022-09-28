@@ -39,13 +39,14 @@ a {
     display: flex;
     gap: 15%;
     justify-content: flex-end;
-    padding-top: 3em;
-    padding-bottom: 1em;
+    padding: 3em 0 1em 0;
+    /* padding-top: 3em;
+    padding-bottom: 1em; */
 }
 
 .overHead {
     display: flex;
-justify-content: space-between;
+    justify-content: space-between;
 }
 
 .nowShowing__container a {
@@ -76,9 +77,10 @@ justify-content: space-between;
 .nowShowing-seeMore a {
     color: #AAA9B1;
     border: #9C9C9C solid 1px;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 1%;
+    padding: 1% 2% 0 2%;
+    /* padding-left: 2%;
+padding-right: 2%;
+padding-top: 1%; */
     border-radius: 34px;
 
 
@@ -139,9 +141,10 @@ justify-content: space-between;
     background-color: #DBE3FF;
     border-radius: 10px;
     /* padding: 3px; */
-    padding-top: 3px;
+    padding: 3px 0 3px 6x;
+    /* padding-top: 3px;
     padding-bottom: 3px;
-    padding-left: 6px;
+    padding-left: 6px; */
     margin-left: 5%;
 }
 

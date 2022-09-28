@@ -18,15 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
   //adding variables for dark and light mode by select data-mode
 
   let lightBtnElm = document.querySelector("[data-mode=light]");
-  let darkBtnElm = document.querySelector("[data-mode=dark]");
+  let darkBtnElm = document.querySelector(".switch input");
 
   //function to change to light when clicking
   lightBtnElm.addEventListener("click", function () {
     setActiveStyleSheet("light");
   });
 
-  darkBtnElm.addEventListener("click", function () {
-    setActiveStyleSheet("dark");
+  darkBtnElm.addEventListener("click", function (e) {
+    console.log(e.target.checked);
+    if (e.target.checked) {
+      setActiveStyleSheet("dark");
+    } else {
+      setActiveStyleSheet("light");
+    }
   });
 
   console.log(darkBtnElm);
