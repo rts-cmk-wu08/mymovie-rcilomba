@@ -31,6 +31,27 @@ document.addEventListener("DOMContentLoaded", () => {
   let footerElm = document.createElement("footer");
   wrapperElm.append(footerElm);
 
+  // test
+  headerElm.innerHTML = `
+<div class="moviesHeader">
+<h1>MyMovies</h1>
+
+<div class="movieHeader__container">
+         <div class="movieHeader__containerBox">
+            <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+
+    <!-- <button>switch</button> -->
+
+    <label class="switch">
+  <input type="checkbox">
+  <span class="slider round" data-mode="light" ></span>
+</label>
+</div>
+    
+    `;
+  // end test
+
   //skapa en fetch till video?
   //https://developers.themoviedb.org/3/movies/get-movie-videos
 
@@ -46,17 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let movieHeader = document.createElement("div");
       movieHeader.classList.add("movieHeader");
       movieHeader.innerHTML = `
-    <div class="movieHeader__container">
-         <div class="movieHeader__containerBox">
-            <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
-    </div>
-
-     <div class="movieHeader__containerBox">
-       <label class="switch">
-  <input type="checkbox">
-  <span class="slider round" data-mode="light" ></span>
-</label>
-    </div>
+    
     
     </div>
     <!-- ersätt img med video trailer istället  -->
