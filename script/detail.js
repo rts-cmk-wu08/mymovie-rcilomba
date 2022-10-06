@@ -40,6 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       // console.log(data)
 
+      //////////
+      // läggkoden utanför fetch för att få darkmode att fungera  i detal.js
+
       let movieHeader = document.createElement("div");
       movieHeader.classList.add("movieHeader");
       movieHeader.innerHTML = `
@@ -49,16 +52,19 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
      <div class="movieHeader__containerBox">
-        <label class="switch">
+       <label class="switch">
   <input type="checkbox">
-  <span class="slider round"></span>
+  <span class="slider round" data-mode="light" ></span>
 </label>
     </div>
+    
     </div>
     <!-- ersätt img med video trailer istället  -->
     <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title} poster">
     `;
       headerElm.append(movieHeader);
+
+      //////////////
 
       // fetch for length, language and rating
 
