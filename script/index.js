@@ -1,5 +1,7 @@
 import { genres } from "./genres.js";
 import { makeElement } from "./modules/makeElement.js";
+import header from "./modules/header.js";
+import popularHeader from "./modules/populrHeader.js";
 
 console.log(genres);
 let baseURL = "https://api.themoviedb.org/3";
@@ -8,9 +10,8 @@ let apikey = "d6efc3cfd36ae94f20eb77ed991667a4";
 let wrapperElm = document.querySelector(".wrapper");
 
 //creating elements, main etc and append them on the site
-let headerElm = makeElement("header", "header");
-
-wrapperElm.append(headerElm);
+// let headerElm = makeElement("header", "header");
+wrapperElm.append(header()); // exportera header funktionen
 
 let mainElm = document.createElement("main");
 wrapperElm.append(mainElm);
@@ -22,25 +23,6 @@ let myMoviesElm = makeElement("div", "myMovies");
 mainElm.append(myMoviesElm);
 
 // content in the variables above
-
-//content in header section
-headerElm.innerHTML = `
-<div class="moviesHeader">
-<h1>MyMovies</h1>
-    <!-- <button>switch</button> -->
-
-    <label class="switch">
-  <input type="checkbox">
-  <span class="slider round" data-mode="light" ></span>
-</label>
-</div>
-
-<div class="nowShowing-seeMore">
-    <h2>Now Showing</h2>
-    <a href="#">See more</a>
-</div>
-    
-    `;
 
 // now showing logic here
 let nowShowingElm = document.createElement("section");
@@ -81,9 +63,7 @@ popularHeader.innerHTML = `
      <div class="popular-seeMore">
     <h2>Popular</h2>
     <a href="#">See more</a>
-</div>
-   
-    `;
+</div>`;
 popularElm.append(popularHeader);
 
 //polular movies showing here

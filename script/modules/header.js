@@ -2,6 +2,7 @@ let header = function () {
   let element = document.createElement("header");
   element.classList.add("header");
 
+  //content in header section
   element.innerHTML = `
 <div class="moviesHeader">
 <h1>MyMovies</h1>
@@ -20,3 +21,5 @@ let header = function () {
 
   return element;
 };
+
+export default header; // exportera vår funktion
