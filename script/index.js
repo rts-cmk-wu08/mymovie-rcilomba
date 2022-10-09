@@ -1,7 +1,8 @@
 import { genres } from "./genres.js";
 import { makeElement } from "./modules/makeElement.js";
 import header from "./modules/header.js";
-import popularHeader from "./modules/populrHeader.js";
+import popularHeader from "./modules/popularHeader.js";
+import genreSpan from "./modules/genreSpan.js";
 
 console.log(genres);
 let baseURL = "https://api.themoviedb.org/3";
@@ -12,6 +13,7 @@ let wrapperElm = document.querySelector(".wrapper");
 //creating elements, main etc and append them on the site
 // let headerElm = makeElement("header", "header");
 wrapperElm.append(header()); // exportera header funktionen
+// wrapperElm.append(popularHeader);
 
 let mainElm = document.createElement("main");
 wrapperElm.append(mainElm);
@@ -58,13 +60,7 @@ let popularElm = document.createElement("section");
 popularElm.classList.add("popular");
 mainElm.append(popularElm);
 
-let popularHeader = document.createElement("header");
-popularHeader.innerHTML = `
-     <div class="popular-seeMore">
-    <h2>Popular</h2>
-    <a href="#">See more</a>
-</div>`;
-popularElm.append(popularHeader);
+popularElm.append(popularHeader("Popular"));
 
 //polular movies showing here
 let popularMovies = document.createElement("div");
@@ -99,12 +95,12 @@ fetch(`${baseURL}/movie/popular?api_key=${apikey}`)
 
       let genreElm = article.querySelector(".genres");
       movie.genre_ids.forEach((id) => {
-        let currentGenre = genres.find((genre) => genre.id == id);
-        // console.log(currentGenre);
-        let genreSpan = document.createElement("span");
-        genreSpan.classList.add("genre__pill");
-        genreSpan.innerText = currentGenre.name;
-        genreElm.append(genreSpan);
+        // let currentGenre = genres.find((genre) => genre.id == id);
+        // // console.log(currentGenre);
+        // let genreSpan = document.createElement("span");
+        // genreSpan.classList.add("genre__pill");
+        // genreSpan.innerText = currentGenre.name;
+        genreElm.append(genreSpan(id));
       });
 
       // footer
